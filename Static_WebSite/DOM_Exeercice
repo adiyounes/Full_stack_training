@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise</title>
+</head>
+<body>
+    <h1>I am a good h1</h1>
+    <p id="first" class="special" >Hello my family</p>
+    <p class="special">Goodbye</p>
+    <p>Hi again</p>
+    <p id="last">Goodbye again</p>
+    <script>
+        var paragraph=document.getElementById("first");
+        paragraph.innerHTML="Hello everyone";
+        var paragraph1=document.getElementsByClassName("special");
+        paragraph.innerHTML="Hello students";
+        var allparagraph=document.getElementsByClassName("special");
+        allparagraph[0]="Hello Teachers";
+        var allparagraph1=document.getElementsByTagName("p");
+        allparagraph1[0]="Hello something";
+    </script>
+</body>
+</html>
