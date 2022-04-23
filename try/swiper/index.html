@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 80%;
+        margin: 10% 0;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        /* --------------aded----- */
+        flex-direction: column;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .img-container ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+    .img-container:hover ul{
+    top: 65%;
+    }
+
+    .img-container ul li{
+        background-color: var(--secondary);
+        border-radius: 50%;
+        display: flex;
+        width:40px;
+        height:40px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .img-container ul li a{
+        margin: 0;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fab{
+        color: white;
+    }
+    
+    .s-info{
+        width: 100%;
+    }
+    .s-name h3{
+        text-transform: uppercase;
+        color: var(--primary);
+        font-weight: 600;
+        font-family: var(--main-font);
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    } 
+    
+    .s-club{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+    
+    .s-club h3{
+        font-size: 1.1em;
+        color: var(--grey);
+        font-weight: 400;
+    }
+    
+    
+    .s-club h5{
+        font-size: 1.1em;
+        color: var(--light);
+        text-transform: capitalize;
+        font-weight: 400;
+        padding-right: 4px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <h1>HI THERRE</h1>
+      <div class="swiper-wrapper speakers-info">
+        <div class="swiper-slide speaker">
+            <div class="img-container">
+                <img src="C:\Users\Surface\Desktop\MC\Full_stack_training\projet\img\xteam1.jpg">
+                <ul>
+                    <li>
+                        <a href=""></a>
+                        <i class="fab fa-facebook-f"></i>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                        <i class="fab fa-instagram"></i>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                        <i class="fab fa-linkedin-in"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="s-info">
+                <div class="s-name">
+                    <h3>first lastname</h3>
+                </div>
+                <div class="s-club">
+                    <h5>web devaploper</h5>
+                    <h3>@MicroClub</h3>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
